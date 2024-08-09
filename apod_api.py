@@ -5,7 +5,7 @@ import requests
 
 def main():
     # TODO: Add code to test the functions in this module
-    apod_info_dict = get_apod_info('2024-04-13')
+    apod_info_dict = get_apod_info('2024-08-09')
     print(apod_info_dict)
     #print(get_apod_image_url(apod_info_dict))
     return
