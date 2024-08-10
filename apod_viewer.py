@@ -42,7 +42,7 @@ class AstronomyDesktopApp:
         status = apod_desktop.add_apod_to_cache(apod_date)
         if status:
             apod_info = apod_desktop.get_apod_info(status)
-            image_lib.set_desktop_background_image(apod_info['file_path'])
+            image_lib.set_desktop_background(apod_info['file_path'])
             messagebox.showinfo("Successful", "Desktop background set successfully.")
         else:
             messagebox.showerror("Failed to download APOD image.")
