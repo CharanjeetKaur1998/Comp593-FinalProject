@@ -23,7 +23,7 @@ def get_apod_info(apod_date):
     # TODO: Complete the function body
     # Hint: The APOD API uses query string parameters: https://requests.readthedocs.io/en/latest/user/quickstart/#passing-parameters-in-urls
     # Hint: Set the 'thumbs' parameter to True so the info returned for video APODs will include URL of the video thumbnail image 
-    payload = {'api_key':'uZv1QMecDUR1qduWdXLEgAgRQdIhCHRjqXs7xuHQ','date':apod_date,'thumbs':True}
+    payload = {'api_key':'FoXv8nTmD9GuWr3LoyFXNPxqlGekYHojJuoJTJpH','date':apod_date,'thumbs':True}
     resp_msg = requests.get('https://api.nasa.gov/planetary/apod',params=payload)
     info_json=resp_msg.json()
     return info_json
