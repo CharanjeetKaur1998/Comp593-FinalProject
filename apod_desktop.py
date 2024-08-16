@@ -266,7 +266,7 @@ def get_all_apod_titles():
 import sqlite3
 
 def get_all_apod_titles():
-      con = sqlite3.connect(image_cache_db)
+      conn = sqlite3.connect(image_cache_db)
       cursor = conn.cursor()
       cursor.execute("SELECT title FROM apod_images")  # Ensure 'title' matches the column name in your database
       titles = [row[0] for row in cursor.fetchall()]
