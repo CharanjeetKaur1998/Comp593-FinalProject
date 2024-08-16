@@ -48,7 +48,7 @@ class AstronomyDesktopApp:
             messagebox.showerror("Failed to download APOD image.")
 
     def load_titles(self):
-        ttl = apod_desktop.get_all_apod_titles()
+        ttl = apod_desktop.get_all_apod_titles()  # This retrieves the titles from the database.
         self.titles_listbox.delete(0, tk.END)
         for title in ttl:
             self.titles_listbox.insert(tk.END, title)

@@ -262,14 +262,16 @@ def get_all_apod_titles():
     """
     # TODO: Complete function body
     # NOTE: This function is only needed to support the APOD viewer GUI
-    import sqlite3
-    connection = sqlite3.connect(image_cache_db)
-    cursor = connection.cursor()
-    cursor.execute("SELECT image_title FROM apod_images")
-    results = cursor.fetchall()
-    titles = [result[0] for result in results]
-    connection.close()
-    return titles  
+    
+import sqlite3
+
+def get_all_apod_titles():
+      conn = sqlite3.connect(image_cache_db)
+      cursor = conn.cursor()
+      cursor.execute("SELECT title FROM apod_images")  # Ensure 'title' matches the column name in your database
+      titles = [row[0] for row in cursor.fetchall()]
+      conn.close()
+      return titles
 
 if __name__ == '__main__':
     main()
